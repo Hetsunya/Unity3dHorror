@@ -21,6 +21,7 @@ public class PlayerSoundsWalk : MonoBehaviour
     public void PlayStep(string nameMap) {
         if (!GetComponent<MovePlayer>().Run_Player)
         {
+            timer = 0.5f;
             switch (nameMap) {
                 //ВАЖНО ЧТОБЫ ПОВЕРХНОСТЬ В ЮНИТИ НАЗЫВАЛАСЬ ТАКЖЕ КАК В CASE
                 case "Map_1":
@@ -34,6 +35,7 @@ public class PlayerSoundsWalk : MonoBehaviour
         }
         //ЗВУКОВ ДЛЯ БЕГА НЕТ XDDDDDDDD
         else {
+            timer = 0.3f;
             switch (nameMap) {
                 case "Map_1":
                     clip = map_1_run[Random.Range(0, map_1_run.Length)];
@@ -50,8 +52,8 @@ public class PlayerSoundsWalk : MonoBehaviour
         IEnumerator playSound() {
             stop = true;
             source.PlayOneShot(clip);
-            yield return new WaitForSeconds(clip.length); //ЗВУК ПО ДЛИНЕ КЛИПА 
-            // yield return new WaitForSeconds(timer); //ЗВУК ПО КОНСТАНТЕ
+            // yield return new WaitForSeconds(clip.length); //ЗВУК ПО ДЛИНЕ КЛИПА 
+            yield return new WaitForSeconds(timer); //ЗВУК ПО КОНСТАНТЕ
             stop = false;
         }
         
