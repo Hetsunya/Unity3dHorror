@@ -975,12 +975,29 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 5.3407435, y: 2.769274, z: 0.07585917}
   m_Center: {x: 0.0000009536743, y: 0, z: 0.037929703}
+--- !u!114 &109152615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109152610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835554226115e00489c90c017063158f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorEnter: 0
+  cursorTexture_Main: {fileID: 2800000, guid: d7be221bf7989ea4f919d162a9e4ba71, type: 3}
+  cursorTexture_Hand: {fileID: 2800000, guid: d7be221bf7989ea4f919d162a9e4ba71, type: 3}
+  distance: 100
+  dist: 0
 --- !u!1 &113934635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
@@ -5422,7 +5439,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5df73844451ca2244976a777f552cb31, type: 2}
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5430,6 +5447,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
       insertIndex: -1
       addedObject: {fileID: 109152611}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 109152615}
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!1 &860056121
 GameObject:
@@ -10057,9 +10077,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorEnter: 0
-  cursorTexture: {fileID: 2800000, guid: 25e85214daba65d4db24e5eb18ed2285, type: 3}
+  cursorTexture_Main: {fileID: 2800000, guid: d7be221bf7989ea4f919d162a9e4ba71, type: 3}
+  cursorTexture_Hand: {fileID: 2800000, guid: 25e85214daba65d4db24e5eb18ed2285, type: 3}
   distance: 2
-  dist: 0
+  dist: 1
 --- !u!1 &1637451589
 GameObject:
   m_ObjectHideFlags: 0
@@ -10072,6 +10093,7 @@ GameObject:
   - component: {fileID: 1637451591}
   - component: {fileID: 1637451590}
   - component: {fileID: 1637451593}
+  - component: {fileID: 1637451594}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -10170,6 +10192,18 @@ MonoBehaviour:
   sensVert: 9
   minVert: -45
   maxVert: 45
+--- !u!114 &1637451594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637451589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c07193856918f48bce32a02d9d8fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638634819
 GameObject:
   m_ObjectHideFlags: 0
