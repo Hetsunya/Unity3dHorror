@@ -21,7 +21,7 @@ public class CursorHand : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         
         if (cursorEnter == true){
-            if (Vector3.Distance(transform.position, player.transform.position) < distance)
+            if (Vector3.Distance(transform.position, player.transform.position) <= distance)
                 dist = true;
             else 
                 dist = false;
