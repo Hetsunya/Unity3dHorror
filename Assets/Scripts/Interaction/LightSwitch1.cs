@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitch : MonoBehaviour, IInteractable
+public class LightSwitch1 : MonoBehaviour, IInteractable
 {
     public Light m_Light;
     public bool isOn;
