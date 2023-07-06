@@ -45,7 +45,6 @@ public class LightSwitch : MonoBehaviour
             {
                 ToggleLights(); // Включаем свет после задержки
                 StopAudio(); // Прекращаем проигрывание аудио
-
             }
         }
     }
